@@ -1,0 +1,29 @@
+let n1 = 5;
+let n2 = 10;
+let op = '+';
+
+
+let calculate = (n1, n2, op) => new Promise((resolve, reject) => {
+  switch (op) {
+    case '+':
+      resolve(n1 + n2);
+      break;
+    case '-':
+      resolve(n1 - n2);
+      break;
+    case '*':
+      resolve(n1 * n2);
+      break;
+    case '/':
+      if (n2 === 0) reject("Error: Div by 0");
+      else resolve(n1 / n2);
+      break;
+    default:
+      reject("Invalid operation");
+  }
+});
+
+
+calculate(n1, n2, op)
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
