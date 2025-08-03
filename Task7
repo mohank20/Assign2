@@ -1,0 +1,9 @@
+let data = [
+  {name:"hgwes", score: 73},
+  {name:"hgw2s", score: 53},
+  {name:"h2wes", score: 83},
+  {name:"hgwe2", score: 23},
+  {name:"2gwes", score: 43},
+  ];
+let total = data.filter(e=>e.score>=60);
+console.log(total);

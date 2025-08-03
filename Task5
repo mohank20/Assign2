@@ -1,0 +1,7 @@
+let nums = ["bgdfjszhd", "jbhd", "uyshujdis", "hds", "jhbefdsddesdnjkd"];
+
+let lengths=nums.map(num=>num.length);
+let maxlen = lengths.reduce((max,length)=>Math.max(max,length),0);
+let sum = nums.filter(nums=>nums.length==maxlen);
+
+console.log(sum);
